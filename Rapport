@@ -1,0 +1,41 @@
+
+                            Rapport Cryptographie
+
+
+
+1. Nous avons choisi de développer notre application avec JAVA. Nous n'utilisons pas de bibliothèques particulière,
+nous utilisons la classe BigInteger de JAVA(JAVA 7 ou plus) qui théoriquement n'a pas de limite.
+
+Les principales opérations implémentées sont :
+
+- Abs
+- add
+- and
+- and not
+- divide
+- divideAndRemainder
+- flipBit(int n)
+- gcd(BigInteger val)
+- isProbablePrime
+- max
+- min
+- mod
+- modInverse
+- modPow
+- multiply
+- negate
+- nextProbablePrime
+- or
+- pow
+- shiftLeft
+- shiftRight
+- subtract
+- xor
+
+
+2.
+
+
+
+
+3.
