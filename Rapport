@@ -39,3 +39,19 @@ Les principales opérations implémentées sont :
 
 
 3.
+
+
+
+7. Une fonction de hachage cryptographique sûre doit avoir une résistance aux collisions, résistance à la préimage, résistance à la seconde préimage
+et elle doit etre rapide à calculer pour etre utilisable.
+
+
+- Résistance aux collisions : il est dur (2^(n/2)) de trouver x' != x tel que H(x') = H(x)
+- Résistance à la première préimage : il est dur (2^n) de trouver 1 x tel que H(x) = y
+- Résistance à la seconde préimage : Si x fixé, il est dur (2^n) de trouver x' != x tel que H(x') = H(x)
+
+On peut utiliser la fonction de hashage SHA-256 (SHA-2) qui a une taille de sortie de 256 et qui a été standardisée.
+
+
+On peut utilise en Java des classes (MessageDigest) qui de convertir un tableau d'octet en hash de SHA-2
+

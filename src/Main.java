@@ -1,13 +1,35 @@
-import java.math.BigInteger;
+import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 public class Main {
 
+    public static void main(String[] args) throws NoSuchAlgorithmException {
 
+
+        for(int i=0;i<100;i++) {
+            Schnorr again = new Schnorr();
+            again.KeyGen(260, 1800);
+
+            new randomStringGenerator();
+
+            String message = randomStringGenerator.generateString();
+
+            System.out.println("Le message est :"+message);
+
+            again.Sign(message);
+
+            again.Verify(message);
+        }
+    }
+}
+
+class randomStringGenerator {
     public static void main(String[] args) {
+        System.out.println(generateString());
+    }
 
-
-        BigInteger test = new BigInteger("234567834567123456234562345672345672345672345672345611234567812345678123456709549109549109123456789023456782345678549109549109549467835678998765678907890567878941",10);
-
-        System.out.println(test.bitLength());
+    public static String generateString() {
+        String uuid = UUID.randomUUID().toString();
+        return "uuid = " + uuid;
     }
 }
